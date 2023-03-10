@@ -7,8 +7,8 @@ RUN apt install unrar -y
 RUN apt install wget -y
 RUN apt install jupyter -y
 RUN apt install unzip -y
-RUN apt install python3
-RUN apt install python3-pip
+RUN apt install python3 -y
+RUN apt install python3-pip -y
 # Add other pakages before deployment 
 # RUN apt install <your-pakage> -y
 RUN mkdir /JupyterNotebooks
