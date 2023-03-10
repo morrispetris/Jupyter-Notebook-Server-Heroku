@@ -9,7 +9,7 @@ RUN apt install wget -y
 RUN apt install unzip -y
 RUN apt install python3 -y
 RUN apt install python3-pip -y
-RUN pip3 install notebook
+RUN pip3 install notebook -y
 # Add other pakages before deployment 
 # RUN apt install <your-pakage> -y
 RUN mkdir /JupyterNotebooks
