@@ -1,5 +1,6 @@
-FROM python:3.8 
+FROM python:3.11
 RUN pip install tensorflow 
+RUN pip install transformer
 RUN pip install jupyter
 
 RUN mkdir /JupyterNotebooks
