@@ -14,7 +14,7 @@ c.NotebookApp.open_browser = False
 
 # ipython -c "from notebook.auth import passwd; passwd()"
 c.NotebookApp.password = u''
-c.NotebookApp.token = ''
+#c.NotebookApp.token = ''
 c.NotebookApp.port = int(os.environ.get("PORT", 8888))
 c.NotebookApp.allow_root = True
 c.NotebookApp.allow_password_change = True
