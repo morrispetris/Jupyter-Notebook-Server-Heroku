@@ -9,9 +9,8 @@ COPY jupyter.py /conf/jupyter.py
 COPY jupyter_notebook_config.json /root/.jupyter/jupyter_notebook_config.json
 
 
-RUN echo "$PASSWORD"
-RUN echo "$PASS"
-ENTRYPOINT ["jupyter", "notebook", "--ip=0.0.0.0", "--NotebookApp.password=$PASS", "--allow-root"]
+PASSWORD="$(< /etc/secrets/PASSWORD)"
+ENTRYPOINT ["jupyter", "notebook", "--ip=0.0.0.0", "--NotebookApp.password=$PASSWORD", "--allow-root"]
 
 
 #CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--NotebookApp.password=$PASSWORD", "--allow-root"]
