@@ -8,8 +8,10 @@ COPY JupyterNotebooks /JupyterNotebooks
 COPY jupyter.py /conf/jupyter.py
 COPY jupyter_notebook_config.json /root/.jupyter/jupyter_notebook_config.json
 
-ENV PASSWORD=$PASSWORD
+RUN ["jupyter", "notebook", "--ip=0.0.0.0", "--port=$PORT", "--NotebookApp.password=$PASSWORD", "--allow-root"]
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-CMD /entrypoint.sh
+#ENV PASSWORD=$PASSWORD
+
+#COPY entrypoint.sh /entrypoint.sh
+#RUN chmod +x /entrypoint.sh
+#CMD /entrypoint.sh
