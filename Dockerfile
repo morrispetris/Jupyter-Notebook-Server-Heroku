@@ -4,6 +4,7 @@ RUN pip install transformers
 RUN pip install jupyter
 
 RUN mkdir /JupyterNotebooks
+RUN mkdir /projects
 COPY JupyterNotebooks /JupyterNotebooks
 COPY jupyter.py /conf/jupyter.py
 #COPY jupyter_notebook_config.json /root/.jupyter/jupyter_notebook_config.json
