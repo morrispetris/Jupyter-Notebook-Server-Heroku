@@ -8,7 +8,7 @@ COPY JupyterNotebooks /JupyterNotebooks
 COPY jupyter.py /conf/jupyter.py
 COPY jupyter_notebook_config.json /root/.jupyter/jupyter_notebook_config.json
 
-RUN ["jupyter", "notebook", "--ip=0.0.0.0", "--port=$PORT", "--NotebookApp.password=$PASSWORD", "--allow-root"]
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=$PORT", "--NotebookApp.password=$PASSWORD", "--allow-root"]
 
 #ENV PASSWORD=$PASSWORD
 
